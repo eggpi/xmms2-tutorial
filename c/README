@@ -40,3 +40,12 @@ Use a callback to listen for a broadcast.
 
 tut8:
 Use a callback to listen for a signal and restart it a few times.
+
+tut9:
+A simple, low-level service client that sums sums two integers.
+Should be run/studied along with tut10.
+
+tut10:
+A simple, low-level client that interacts with tut9.
+Should be run/studied along with tut9.
+A corresponding 

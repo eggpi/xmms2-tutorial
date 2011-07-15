@@ -1,2 +1,3 @@
-c/tut?
+c/tut*
+!c/tut*.c
 c/*.o
