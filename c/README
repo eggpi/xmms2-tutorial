@@ -11,8 +11,8 @@ Alternatively, run 'make all' to build all the tutorials.
 
 === Tutorial Descriptions ===
 
-tut1: 
-Will show how to connect to the xmms2d and send a basic command 
+tut1:
+Will show how to connect to the xmms2d and send a basic command
 without reply
 
 tut2:
@@ -33,5 +33,10 @@ On the topic of propdicts and dicts and foreaching dicts.
 ''' Here the async clients start '''
 
 tut6:
-Connect a async client to the GMainloop and recive a signal.
+Connect a async client to the GMainloop and receive a signal.
 
+tut7:
+Use a callback to listen for a broadcast.
+
+tut8:
+Use a callback to listen for a signal and restart it a few times.
