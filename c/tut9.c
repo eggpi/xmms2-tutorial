@@ -61,6 +61,7 @@ int
 sum (xmmsv_t *c2c_msg, void *userdata)
 {
 	int op1, op2;
+	xmmsc_result_t *res;
 	xmmsv_t *operands, *sum;
 	xmmsc_connection_t *connection;
 
@@ -96,10 +97,17 @@ sum (xmmsv_t *c2c_msg, void *userdata)
 	 * attempts to reply to our reply.
 	 */
 	sum = xmmsv_new_int (op1 + op2);
-	xmmsc_c2c_reply (connection,
-	                 xmmsv_c2c_message_id_get (c2c_msg),
-	                 XMMS_C2C_REPLY_POLICY_NO_REPLY,
-	                 sum);
+	res = xmmsc_c2c_reply (connection,
+	                       xmmsv_c2c_message_id_get (c2c_msg),
+	                       XMMS_C2C_REPLY_POLICY_NO_REPLY,
+	                       sum);
+
+	/* Replies, being themselves client-to-client messages,
+	 * are also associated with results (so you can set up a
+	 * callback for the counter-reply).
+	 * Since there will be no more replies, just unref the result.
+	 */
+	xmmsc_result_unref (res);
 
 	return TRUE;
 }
