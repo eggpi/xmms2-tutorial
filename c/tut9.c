@@ -10,8 +10,9 @@
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  *  Lesser General Public License for more details.
- *
- *  This file implements the low-level 'sumserver' service client.
+ */
+
+/*  This file implements the low-level 'sumserver' service client.
  *  It accepts messages containing a list of two operands, and replies
  *  with the sum of these operands.
  *  Should be run/studied along with tut10 aka sumclient.

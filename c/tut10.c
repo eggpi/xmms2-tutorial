@@ -10,8 +10,9 @@
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  *  Lesser General Public License for more details.
- *
- *  This file implements the low-level 'sumclient' client, which
+ */
+
+/*  This file implements the low-level 'sumclient' client, which
  *  asynchronously interacts with 'sumservice' (implemented in tut9.c).
  *  It sends a message containing two operands in a list to another client
  *  and expects their sum as a reply. The destination client's id and the
