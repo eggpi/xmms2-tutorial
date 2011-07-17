@@ -112,6 +112,8 @@ main (int argc, char **argv)
 	                         XMMS_C2C_REPLY_POLICY_SINGLE_REPLY,
 	                         operands);
 
+	xmmsv_unref (operands);
+
 	xmmsc_result_notifier_set (result, print_sum, ml);
 	xmmsc_result_unref (result);
 

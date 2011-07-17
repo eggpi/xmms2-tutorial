@@ -103,6 +103,8 @@ sum (xmmsv_t *c2c_msg, void *userdata)
 	                       XMMS_C2C_REPLY_POLICY_NO_REPLY,
 	                       sum);
 
+	xmmsv_unref (sum);
+
 	/* Replies, being themselves client-to-client messages,
 	 * are also associated with results (so you can set up a
 	 * callback for the counter-reply).
